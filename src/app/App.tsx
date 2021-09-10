@@ -1,3 +1,5 @@
-const App = () => <>Hello World</>;
+import { Main } from './sections/main/Main';
+
+const App = () => <Main />;
 
 export default App;

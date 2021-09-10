@@ -1,7 +1,17 @@
+import Axios from 'axios';
 import ReactDOM from 'react-dom';
+import { configure } from 'axios-hooks';
+
+import config from 'config';
 
 import App from './app/App';
 import * as serviceWorker from './serviceWorker';
+
+const axios = Axios.create({
+  baseURL: config.apiUrl,
+});
+
+configure({ axios });
 
 const app = <App />;
 
